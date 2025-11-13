@@ -24,15 +24,12 @@ body {
   color: #fff;
   padding: 20px 35px;
   position: relative;
-  border-bottom: #111 1px solid;
 }
 
 .logo a {
   font-size: 1.5rem;
   text-decoration: none;
   color: #fff;
-  font-family: "Pacifico";
-  font-weight: normal;
 }
 
 .menu-toggle {
@@ -89,8 +86,6 @@ body {
 }
 #header h2 {
   font-size: 3rem;
-  font-family: "Pacifico";
-  font-weight: normal;
 }
 #header p {
   font-size: larger;
@@ -105,7 +100,7 @@ body {
 }
 .btn-contain button a {
   color: #fff;
-  background-color: gold;
+  background-color: #000;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -137,7 +132,7 @@ body {
     justify-content: center;
 }
 .service-card{
-    background: #fff;
+    background: #000;
     width: 350px;
     border-radius: 15px;
     padding: 1.5rem;
@@ -153,7 +148,9 @@ body {
     font-size: 15pt;
     color: gold;
 }
-
+.service-card p{
+    color: #fff;
+}
 
 /* --------- MOBILE STYLES ---------- */
 @media (max-width: 768px) {
@@ -173,11 +170,13 @@ body {
     padding: 20px 0;
     display: none;
   }
-
+  #header h2{
+    font-size: 2rem;
+  }
   .nav-links.active {
     display: flex;
   }
   .service-card{
-    width: 65%;
+    width: 80%;
   }
 }
