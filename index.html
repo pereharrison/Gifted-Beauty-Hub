@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gifted Beauty Hub</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar">
+            <div class="logo"><a href="./index.html">Gifted Beauty Hub</a></div>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="./pages/services.html">Services</a></li>
+                <li><a href="./pages/sook.html">Book</a></li>
+                <li><a href="./pages/gallery.html">Gallery</a></li>
+                <li><a href="./pages/about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header -->
+        <header id="header">
+            <h2>
+                Enhance Your Beauty,<br />
+                Own Your
+                <span style="color: gold; text-decoration: underline">Style</span>
+            </h2>
+            <p>
+                We specialize in professional nail care and stunning hair
+                transformations…
+            </p>
+            <section class="btn-contain">
+                <button><a href="./pages/book.html">Book now</a></button>
+                <button><a href="./pages/gallery.html">See our gallery</a></button>
+            </section>
+        </header>
+
+        <main>
+            <section id="feature-container">
+                <h2 class="feature-head">Our Featured Services</h2>
+                <div class="services-contain">
+                    <div class="service-card">
+                        <img src="./assets/pedicure.jpg" alt="Manicure & Pedicure" />
+                        <h3>Luxury Manicure & Pedicure</h3>
+                        <p>
+                            Pamper yourself with a relaxing treatment that leaves your nails
+                            looking flawless.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./assets/wiginstallation.jpg" alt="Wig Installation" />
+                        <h3>Wig Installation & Styling</h3>
+                        <p>Get a perfectly natural look with professional wig installs and custom styling.</p>
+
+                    </div>
+                    <div class="service-card">
+                        <img src="./assets/nailart (2).jpg" alt="Nail Art" />
+                        <h3>Acrylics & Nail Art Design</h3>
+                        <p>From classy to bold, our creative nail artists bring your style to life.</p>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div style="margin-bottom: 70%;"></div>
+    </div>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
