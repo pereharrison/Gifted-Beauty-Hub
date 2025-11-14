@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: gold;
+  background: #000;
   color: #fff;
   padding: 20px 35px;
   position: relative;
@@ -60,7 +60,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: gold;
 }
 .nav-links a:focus {
   border-bottom: 2px solid #fff;
@@ -97,6 +97,7 @@ body {
   outline: none;
   border: none;
   margin-top: 10px;
+  
 }
 .btn-contain button a {
   color: #fff;
@@ -108,10 +109,13 @@ body {
   font-weight: bolder;
   padding: 10px 20px;
   border-radius: 10px;
+  
 }
 .btn-contain button a:hover {
   color: gold;
   background-color: #fff;
+    transition: 0.5s ease;
+
 }
 
 /* Featured section */
@@ -120,6 +124,7 @@ body {
     width: 100%;
     height: 50lvh;
     padding: 4rem 2rem;
+    height: auto;
 }
 .feature-head{
     font-size: 3rem;
@@ -143,6 +148,12 @@ body {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+  object-fit: cover;
+  cursor: pointer;
+}
+.service-card img:hover{
+    transform: scale(1.07);
 }
 .service-card h3{
     font-size: 15pt;
@@ -151,6 +162,96 @@ body {
 .service-card p{
     color: #fff;
 }
+
+
+
+/* Masonry Gallery */
+#gallery-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.gallery-head {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.gallery-sub {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+/* Masonry container */
+#mansory-gallery {
+    column-count: 3;
+    column-gap: 15px;
+    width: 100%;
+}
+
+/* Individual items */
+.mason-item {
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+    break-inside: avoid;
+}
+
+/* Images */
+.mason-item img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    object-fit: cover;
+}
+
+/* Hover zoom effect */
+.mason-item:hover img {
+    transform: scale(1.06);
+}
+
+/* Text overlay */
+.img-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: .3s ease;
+}
+
+/* Hover reveal */
+.mason-item:hover .img-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+.view-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background: gold;
+    color: #fff;
+}
+
+
+
 
 /* --------- MOBILE STYLES ---------- */
 @media (max-width: 768px) {
@@ -163,7 +264,7 @@ body {
     top: 60px;
     right: 0;
     width: 100%;
-    background: gold;
+    background: #000;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -177,6 +278,9 @@ body {
     display: flex;
   }
   .service-card{
-    width: 80%;
+    width: 90%;
   }
+  #mansory-gallery {
+        column-count: 2;
+    }
 }
