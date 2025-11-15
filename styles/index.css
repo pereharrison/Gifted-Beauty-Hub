@@ -305,6 +305,8 @@ h1, h2, h3, .highlight-gold {
   color: var(--gold);
 }
 
+
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .menu-toggle { display: flex; }
@@ -322,6 +324,7 @@ h1, h2, h3, .highlight-gold {
   .nav-links.active { display: flex; }
   .service-card { width: 90%; }
   #mansory-gallery { column-count: 2; }
+  .logo a { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
