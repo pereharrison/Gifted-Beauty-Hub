@@ -10,17 +10,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap"
         rel="stylesheet" />
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="./styles/index.css" />
 </head>
 
 <body>
     <div id="container">
+        <!-- Navigation -->
         <nav class="navbar">
             <div class="logo"><a href="./index.html">Gifted Beauty Hub</a></div>
 
@@ -32,100 +37,102 @@
 
             <ul class="nav-links" id="nav-links">
                 <li><a href="./pages/services.html">Services</a></li>
-                <li><a href="./pages/sook.html">Book</a></li>
+                <li><a href="./pages/book.html">Book</a></li>
                 <li><a href="./pages/gallery.html">Gallery</a></li>
                 <li><a href="./pages/about.html">About Us</a></li>
             </ul>
         </nav>
 
-        <!-- Header -->
+        <!-- Hero Header -->
         <header id="header">
             <h2>
                 Enhance Your Beauty,<br />
-                Own Your
-                <span style="color: black; background-color: gold; color: white">Style</span>
+                Own Your <span class="highlight-gold">Style</span>
             </h2>
             <p>
-                We specialize in professional nail care and stunning hair
-                transformations…
+                Welcome to <strong>Gifted Beauty Hub</strong>, where we specialize in trendy nails and flawless wig styling.
             </p>
             <section class="btn-contain">
-                <button><a href="./pages/book.html">Book now</a></button>
-                <button><a href="./pages/gallery.html">See our gallery</a></button>
+                <button><a href="./pages/book.html">Book Now</a></button>
+                <button><a href="./pages/gallery.html">See Our Gallery</a></button>
             </section>
         </header>
 
+        <!-- Main Content -->
         <main>
+            <!-- Featured Services -->
             <section id="feature-container">
                 <h2 class="feature-head">Our Featured Services</h2>
                 <div class="services-contain">
                     <div class="service-card">
-                        <img src="./assets/pedicure.jpg" alt="Manicure & Pedicure" />
+                        <img src="./assets/pedicure.jpg" alt="Luxury Manicure & Pedicure" loading="lazy" />
                         <h3>Luxury Manicure & Pedicure</h3>
-                        <p>
-                            Pamper yourself with a relaxing treatment that leaves your nails
-                            looking flawless.
-                        </p>
+                        <p>Pamper yourself with a relaxing treatment that leaves your nails looking flawless.</p>
+                        <p class="price">from $45</p>
                     </div>
                     <div class="service-card">
-                        <img src="./assets/wiginstallation.jpg" alt="Wig Installation" />
+                        <img src="./assets/wiginstallation.jpg" alt="Wig Installation" loading="lazy" />
                         <h3>Wig Installation & Styling</h3>
-                        <p>
-                            Get a perfectly natural look with professional wig installs and
-                            custom styling.
-                        </p>
+                        <p>Get a perfectly natural look with professional wig installs and custom styling.</p>
+                        <p class="price">from $80</p>
                     </div>
                     <div class="service-card">
-                        <img src="./assets/nailart (2).jpg" alt="Nail Art" />
+                        <img src="./assets/nailart (2).jpg" alt="Nail Art" loading="lazy" />
                         <h3>Acrylics & Nail Art Design</h3>
-                        <p>
-                            From classy to bold, our creative nail artists bring your style
-                            to life.
-                        </p>
+                        <p>From classy to bold, our creative nail artists bring your style to life.</p>
+                        <p class="price">from $55</p>
                     </div>
                 </div>
             </section>
+
+            <!-- Gallery Section -->
             <section id="gallery-section">
-    <h2 class="gallery-head">Our Work Gallery</h2>
-    <p class="gallery-sub">A glimpse into our nail designs, hair styling & wig installations.</p>
+                <h2 class="gallery-head">Our Work Gallery</h2>
+                <p class="gallery-sub">A glimpse into our nail designs, hair styling & wig installations.</p>
 
-    <div id="mansory-gallery">
-        <div class="mason-item">
-            <img src="./assets/mani1.jpg" alt="Manicure">
-            <span class="img-text">Luxury Manicure</span>
-        </div>
-
-        <div class="mason-item">
-            <img src="./assets/nail1.jpg" alt="Nail Art">
-            <span class="img-text">Acrylic Nails</span>
-        </div>
-
-        <div class="mason-item">
-            <img src="./assets/nail3.jpg" alt="Nail Design">
-            <span class="img-text">Creative Nail Design</span>
-        </div>
-
-        <div class="mason-item">
-            <img src="./assets/wig1.jpg" alt="Wig Installation">
-            <span class="img-text">Wig Installation</span>
-        </div>
-
-        <div class="mason-item">
-            <img src="./assets/wig2.jpg" alt="Wig Styling">
-            <span class="img-text">Wig Styling</span>
-        </div>
-
-        <div class="mason-item">
-            <img src="./assets/wig5.jpg" alt="Hair Finish">
-            <span class="img-text">Final Look</span>
-        </div>
-    </div>
-    <a href="./pages/gallery.html" class="view-more-btn">View Full Gallery →</a>
-</section>
-
-
+                <div id="mansory-gallery">
+                    <div class="mason-item">
+                        <img src="./assets/mani1.jpg" alt="Manicure" loading="lazy">
+                        <span class="img-text">Luxury Manicure</span>
+                    </div>
+                    <div class="mason-item">
+                        <img src="./assets/nail1.jpg" alt="Nail Art" loading="lazy">
+                        <span class="img-text">Acrylic Nails</span>
+                    </div>
+                    <div class="mason-item">
+                        <img src="./assets/nail3.jpg" alt="Nail Design" loading="lazy">
+                        <span class="img-text">Creative Nail Design</span>
+                    </div>
+                    <div class="mason-item">
+                        <img src="./assets/wig1.jpg" alt="Wig Installation" loading="lazy">
+                        <span class="img-text">Wig Installation</span>
+                    </div>
+                    <div class="mason-item">
+                        <img src="./assets/wig2.jpg" alt="Wig Styling" loading="lazy">
+                        <span class="img-text">Wig Styling</span>
+                    </div>
+                    <div class="mason-item">
+                        <img src="./assets/wig5.jpg" alt="Hair Finish" loading="lazy">
+                        <span class="img-text">Final Look</span>
+                    </div>
+                </div>
+                <a href="./pages/gallery.html" class="view-more-btn">View Full Gallery →</a>
+            </section>
         </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <p>© <span id="year"></span> Gifted Beauty Hub. All rights reserved.</p>
+                <div class="social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <!-- Simple Mobile Menu Script -->
     <script>
         const menuToggle = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
@@ -133,6 +140,9 @@
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
+
+        // Auto-update year
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 
