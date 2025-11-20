@@ -200,7 +200,7 @@ h1, h2, h3, .highlight-gold {
 #gallery-section {
   padding: 4rem 2rem;
   text-align: center;
-  background: #f9f9f9;
+  background: var(--cream);
 }
 
 .gallery-head {
@@ -307,6 +307,8 @@ h1, h2, h3, .highlight-gold {
 
 
 
+
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .menu-toggle { display: flex; }
@@ -324,9 +326,9 @@ h1, h2, h3, .highlight-gold {
   .nav-links.active { display: flex; }
   .service-card { width: 90%; }
   #mansory-gallery { column-count: 2; }
-  .logo a { font-size: 1rem; }
+  .logo a { font-size: 1.3rem; }
 }
 
 @media (max-width: 480px) {
-  #mansory-gallery { column-count: 1; }
+  #mansory-gallery { column-count: 2; }
 }

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book | Gifted Beauty Hub</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../styles/booking.css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">Gifted Beauty Hub</a></div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./pages/services.html">Services</a></li>
+        <li><a href="./pages/book.html">Book</a></li>
+        <li><a href="./pages/gallery.html">Gallery</a></li>
+        <li><a href="./pages/about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <header id="header-container">
+      <section class="booking-hero">
+        <h1>Book your transformation</h1>
+        <p><a href="../index.html">Home</a> >> Make an appointment</p>
+      </section>
+    </header>
+
+    <main id="booking-main">
+      <section class="booking-card">
+        <div class="card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Our Location</h3>
+          <h4>Warri Delta State Nigeria</h4>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-phone"></i>
+          <h3>Get in touch</h3>
+          <h4>+234 906 9670 074</h4>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-shop"></i>
+          <h3>Working Hours</h3>
+          <h4>
+            Mon – Fri: 10:00AM - 7:30PM <br />Saturday: 10:00AM - 6:00PM<br />Sunday: Closed
+          </h4>
+        </div>
+      </section>
+
+      <section id="booking-form-container">
+        <h4 class="form-small-head">Time to Treat yourself</h4>
+        <h1 class="form-head">Book an appointment</h1>
+        <p class="form-p">Please fill out the appointment form below to book appointment</p>
+
+        <form id="booking-form">
+          <div class="form-input">
+            <input type="text" placeholder="First Name*" required />
+            <input type="text" placeholder="Last Name*" required />
+          </div>
+          <div class="form-input">
+            <input type="tel" placeholder="Phone number*" required />
+            <input type="email" placeholder="Email Address*" required />
+          </div>
+          <div class="form-input">
+            <input type="text" placeholder="Service*" class="last-input" required />
+          </div>
+          <div class="book-btn-container">
+            <button type="submit" class="btn">Book Appointment</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> Gifted Beauty Hub. All rights reserved.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2349069670074?text=Hi!%20I'd%20like%20to%20book%20a%20service.%20Can%20you%20send%20me%20available%20slots?" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <i class="fas fa-check-circle success-icon"></i>
+      <h2>Appointment Booked!</h2>
+      <p>Your appointment has been successfully booked.<br>We'll contact you shortly to confirm the details.</p>
+      <button class="modal-close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS (your real public key)
+    emailjs.init("_mekMVh06-lzp2HBy");
+
+    // Mobile menu
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Modal elements
+    const modal = document.getElementById("success-modal");
+    const closeBtn = document.querySelector(".modal-close-btn");
+
+    // Form submission
+    document.getElementById("booking-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Collect form data ONCE
+      const firstName = this.querySelector("input[placeholder='First Name*']").value.trim();
+      const lastName  = this.querySelector("input[placeholder='Last Name*']").value.trim();
+      const phone     = this.querySelector("input[placeholder='Phone number*']").value.trim();
+      const email     = this.querySelector("input[placeholder='Email Address*']").value.trim();
+      const service   = this.querySelector("input[placeholder='Service*']").value.trim();
+
+      const templateParams = {
+        first_name: firstName,
+        last_name: lastName,
+        phone: phone,
+        email: email,
+        service: service
+      };
+
+      // Send via EmailJS
+      emailjs.send("service_ebbgx3e", "template_vwr4uep", templateParams)
+        .then(function(response) {
+          console.log("Email sent successfully!", response);
+
+          // WhatsApp Notification (opens your WhatsApp with pre-filled message)
+          const whatsappMessage = `*New Booking!*\n\n` +
+            `Name: ${firstName} ${lastName}\n` +
+            `Phone: ${phone}\n` +
+            `Email: ${email}\n` +
+            `Service: ${service}\n\n` +
+            `_From Gifted Beauty Hub website_`;
+
+          const yourPhoneNumber = "2349014554707"; // ← Your number (correct one)
+          const whatsappURL = `https://wa.me/${yourPhoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+          
+          window.open(whatsappURL, "_blank");
+
+          // Show success + reset form
+          modal.style.display = "flex";
+          document.getElementById("booking-form").reset();
+        })
+        .catch(function(error) {
+          console.error("EmailJS Error:", error);
+          alert("Failed to send. Please use the WhatsApp button in the footer.");
+        });
+    });
+
+    // Close modal
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+  </script>
+</body>
+</html>
