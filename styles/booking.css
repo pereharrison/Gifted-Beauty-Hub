@@ -42,7 +42,7 @@ h3,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--blush) ;
+  background: var(--plum) ;
   padding: 1.2rem 2rem;
   position: sticky;
   top: 0;
@@ -162,9 +162,9 @@ h3,
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 3rem;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2em;
 }
 .form-small-head{
   color: #f08eb7;

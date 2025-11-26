@@ -41,7 +41,7 @@ h1, h2, h3, .highlight-gold {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--blush);
+  background: var(--plum);
   padding: 1.2rem 2rem;
   position: sticky;
   top: 0;

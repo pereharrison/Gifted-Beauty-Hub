@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Gifted Beauty Hub</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+
+
+  <link rel="stylesheet" href="../styles/services.css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">Gifted Beauty Hub</a></div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/book.html">Book</a></li>
+        <li><a href="../pages/gallery.html">Gallery</a></li>
+        <li><a href="../pages/about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="header-container">
+      <section class="service-hero">
+        <h1>Our Services</h1>
+        <p><a href="../index.html">Home</a> >> Make an appointment</p>
+      </section>
+    </header>
+
+    <main id="main-service-container">
+      <section>
+        <!-- Service subtitle -->
+        <p class="service-small-head"> Look Good. Feel Better </p>
+
+        <!-- Service Title -->
+        <h1 class="service-large-head">
+          The exceptional services for the <br />
+          best experience
+        </h1>
+        <p class="title-sub">
+          Experience a wide range of services designed to enhance your well-being.
+          Treatments and personalized guidance tailored to your needs.
+          Find support and resources to navigate challenges and embrace a positive outlook.
+        </p>
+
+        <div id="mansory-gallery">
+          <div class="mason-item">
+            <img src="../assets/wig revamping.jpg" alt="Manicure" loading="lazy" />
+            <span class="img-text">Wig revamping</span>
+          </div>
+          <div class="mason-item">
+            <img src="../assets/nail3.jpg" alt="Wig Installation" loading="lazy" />
+            <span class="img-text">Wig Installation</span>
+          </div>
+          <div class="mason-item">
+            <img src="../assets/wig installment.jpg" alt="Nail Art" loading="lazy" />
+            <span class="img-text">Acrylic Nails</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-icon">
+        <div class="icon-data">
+          <i class="bi bi-chat-heart"></i>
+          <h3>Homelike Atmosphere</h3>
+          <p>Relax in a warm, welcoming space designed to make every visit feel comfortable and stress-free.</p>
+        </div>
+        <div class="icon-data">
+          <i class="bi bi-people"></i>
+          <h3>Team of Professionals</h3>
+          <p>Our experienced stylists and technicians provide expert hair and nail services with skill, care, and creativity.</p>
+        </div>
+        <div class="icon-data">
+          <i class="bi bi-tools"></i>
+          <h3>Professional Materials</h3>
+          <p>We use high-quality, salon-grade products to ensure safe, long-lasting, and beautiful results.</p>
+        </div>
+        <div class="icon-data">
+          <i class="bi bi-calendar3"></i>
+          <h3>Easy Online Booking</h3>
+          <p>Schedule your appointment in seconds with our fast, user-friendly online booking system — anytime, anywhere.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>
+          © <span id="year"></span> Gifted Beauty Hub. All rights reserved.
+        </p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2349069670074?text=Hi!%20I'd%20like%20to%20book%20a%20service.%20Can%20you%20send%20me%20available%20slots?"
+            target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Simple Mobile Menu Script -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
